@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Летающий ангел</title>
+    <style>
+        body {
+            background-image: url('https://i.pinimg.com/originals/b0/15/81/b015814de5582b6536bbb575f66b5775.jpg'); 
+            background-size: cover; 
+            background-repeat: no-repeat;
+            height: 100vh; 
+            margin: 0;
+            overflow: hidden;
+            font-family: sans-serif;
+            color: black; 
+            text-align: center;
+        }
+        h1 {
+            font-size: 2em;
+            margin-top: 20px;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin: 10px 20px;
+        }
+
+        #angel {
+            position: absolute;
+            top: 10%; 
+            left: 0; 
+            animation: fly 20s linear infinite; 
+        }
+
+        #earth {
+            position: absolute;
+            bottom: 10%; 
+            left: 10%; 
+            animation: float 15s linear infinite alternate; 
+        }
+
+        
+        @keyframes fly {
+            0% { left: -150px; } 
+            100% { left: calc(100% + 150px); } 
+        }
+
+        
+        @keyframes float {
+            0% { bottom: 10%; }
+            100% { bottom: 50%; }
+        }
+    </style>
+</head>
+<body>
+<font color="blue">
+    <h1>Летающий ангел</h1>
+</font>
+
+    <p>Используя возможности HTML-языка можно заставить летать ангела по странице.</p>
+    <p>И не только ангела...</p>
+
+    <img id="angel" src="pic/angel.png" alt="Летающий ангел" width="150">
+    <img id="earth" src="pic/planet.png" alt="Вращающаяся Земля" width="100">
+
+</body>
+</html>
